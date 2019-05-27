@@ -71,7 +71,7 @@ sudo apt-get update && sudo apt-get install cmake libopenmpi-dev python3-dev zli
 ```
 
 #### Mac OS X
-Installation of system packages on Mac requires [Homebrew](https://brew.sh). With Homebrew installed, run the follwing:
+Installation of system packages on Mac requires [Homebrew](https://brew.sh). With Homebrew installed, run the following:
 ```bash
 brew install cmake openmpi
 ```
@@ -114,6 +114,8 @@ for i in range(1000):
     action, _states = model.predict(obs)
     obs, rewards, dones, info = env.step(action)
     env.render()
+
+env.close()
 ```
 
 Or just train a model with a one liner if [the environment is registered in Gym](https://github.com/openai/gym/wiki/Environments) and if [the policy is registered](https://stable-baselines.readthedocs.io/en/master/guide/custom_policy.html):
